@@ -15,6 +15,19 @@ pipeline {
       steps {
         echo "Test Deploy Phase"
       }	  
-    }  
+    }
+  stage('Sonarqube') {
+    environment {
+        scannerHome = tool 'SonarPLSQL'
+    }
+    steps {
+        withSonarQubeEnv('sonarqube') {
+            sh "${scannerHome}/bin/sonar-scanner"
+        }
+        timeout(time: 10, unit: 'MINUTES') {
+            waitForQualityGate abortPipeline: true
+        }
+    }
+}	
   }  
 }
