@@ -23,7 +23,7 @@ pipeline {
 			sonar.login=admin
 			sonar.password=admin
 
-			sonar.projectKey=my:firstsqlproject
+			sonar.projectKey=firstsqlproject
 			sonar.projectName=First PLSQL Project
 			sonar.projectVersion=1.0
 			sonar.projectDescription=PL/SQL demo
