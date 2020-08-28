@@ -6,5 +6,9 @@ pipeline
     {
       echo "This is Step1"
     }
+    stage('Step2')
+    {
+      echo "This is Step2"
+    }
   }
 }
