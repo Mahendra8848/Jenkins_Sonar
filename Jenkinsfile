@@ -22,6 +22,7 @@ pipeline {
     }
     steps {
         withSonarQubeEnv('Sonarqube1') {
+		script {
 			sonar.host.url="http://localhost:9000"
 			sonar.login=admin
 			sonar.password=admin
@@ -33,6 +34,7 @@ pipeline {
 			sonar.sources="."
 			sonar.language=plsql
 			sonar.sourceEncoding=UTF-8
+			}
         }
         
     }
