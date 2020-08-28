@@ -17,16 +17,20 @@ pipeline {
       }	  
     }
   stage('Sonarqube1') {
-    environment {
-        scannerHome = tool 'SonarPLSQL'
-    }
     steps {
-        withSonarQubeEnv('Sonarqube1') {
-            sh "${scannerHome}/bin/sonar-scanner"
-        }
-        timeout(time: 10, unit: 'MINUTES') {
-            waitForQualityGate abortPipeline: true
-        }
+        
+            sonar.host.url=http://localhost:9000
+			sonar.login=admin
+			sonar.password=admin
+
+			sonar.projectKey=my:firstsqlproject
+			sonar.projectName=First PLSQL Project
+			sonar.projectVersion=1.0
+			sonar.projectDescription=PL/SQL demo
+			sonar.sources=.
+			sonar.sourceEncoding=UTF-8
+			sonar.inclusions=**/*.sql
+        
     }
 }	
   }  
