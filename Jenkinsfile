@@ -13,11 +13,8 @@ pipeline {
     }
   stage('Deploy') {
       steps {
-        echo "Deploy Phase"
-      }
-	  steps {
-        echo "Additional Deploy Phase"
-      }
+        echo "Test Deploy Phase"
+      }	  
     }  
   }  
 }
