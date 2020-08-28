@@ -24,9 +24,9 @@ pipeline {
 			sonar.password=admin
 
 			sonar.projectKey=firstsqlproject
-			sonar.projectName=First PLSQL Project
-			sonar.projectVersion=1.0
-			sonar.projectDescription=PL/SQL demo
+			sonar.projectName="First PLSQL Project"
+			sonar.projectVersion="1.0"
+			sonar.projectDescription="PL/SQL demo"
 			sonar.sources=.
 			sonar.sourceEncoding=UTF-8
 			sonar.inclusions=**/*.sql
