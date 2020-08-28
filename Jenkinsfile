@@ -27,9 +27,9 @@ pipeline {
 			sonar.projectName="First PLSQL Project"
 			sonar.projectVersion="1.0"
 			sonar.projectDescription="PL/SQL demo"
-			sonar.sources=.
-			sonar.sourceEncoding=UTF-8
-			sonar.inclusions=**/*.sql
+			sonar.sources="."
+			sonar.sourceEncoding="UTF-8"
+			sonar.inclusions="**/*.sql"
         
     }
 }	
