@@ -21,7 +21,7 @@ pipeline {
         scannerHome = tool 'SonarPLSQL'
     }
     steps {
-        withSonarQubeEnv('sonarqube') {
+        withSonarQubeEnv('Sonar_Jenkins') {
             sh "${scannerHome}/bin/sonar-scanner"
         }
         timeout(time: 10, unit: 'MINUTES') {
