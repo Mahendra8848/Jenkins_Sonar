@@ -16,12 +16,12 @@ pipeline {
         echo "Test Deploy Phase"
       }	  
     }
-  stage('Sonarqube') {
+  stage('Sonarqube1') {
     environment {
         scannerHome = tool 'SonarPLSQL'
     }
     steps {
-        withSonarQubeEnv('Sonar_Jenkins') {
+        withSonarQubeEnv('Sonarqube1') {
             sh "${scannerHome}/bin/sonar-scanner"
         }
         timeout(time: 10, unit: 'MINUTES') {
