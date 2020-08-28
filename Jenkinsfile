@@ -33,7 +33,6 @@ pipeline {
 			sonar.sources="."
 			sonar.language=plsql
 			sonar.sourceEncoding=UTF-8
-			sonar.inclusions=**/*.sql
         }
         
     }
