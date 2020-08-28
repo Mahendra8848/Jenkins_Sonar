@@ -19,7 +19,7 @@ pipeline {
   stage('Sonarqube1') {
     steps {
         
-            sonar.host.url=http://localhost:9000
+            sonar.host.url="http://localhost:9000"
 			sonar.login=admin
 			sonar.password=admin
 
