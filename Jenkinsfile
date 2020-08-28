@@ -23,17 +23,7 @@ pipeline {
     steps {
         withSonarQubeEnv('Sonarqube1') {
 		script {
-			sonar.host.url="http://localhost:9000"
-			sonar.login=admin
-			sonar.password=admin
-
-			sonar.projectKey=firstsqlproject
-			sonar.projectName="First PLSQL Project"
-			sonar.projectVersion="1.0"
-			sonar.projectDescription="PL/SQL demo"
-			sonar.sources="."
-			sonar.language=plsql
-			sonar.sourceEncoding=UTF-8
+			sh 'mvn clean package sonar:sonar'
 			}
         }
         
