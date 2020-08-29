@@ -1,0 +1,5 @@
+SET SERVEROUTPUT ON
+BEGIN
+	DBMS_OUTPUT.PUT_LINE('This is Sonar Integration');
+END;
+/
